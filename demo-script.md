@@ -123,7 +123,7 @@ docker compose up -d
 ### Commands
 
 ```
-# Pick Issue: Flight Status Chips (Tier-3, ~1-2 hours, compressed to 15 min demo)
+# Pick Issue: Flight Status Chips (Tier-3)
 
 # Step 1: Understand requirements
 > Read the open issues for this repo. Find the "flight status chips" feature request.

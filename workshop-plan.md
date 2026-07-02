@@ -4,7 +4,6 @@
 
 | Detail | Info |
 |--------|------|
-| **Duration** | 3-4 hours |
 | **Audience** | Faculty & Students (CS/IT) |
 | **Prerequisites** | Basic programming knowledge, Git basics |
 | **Tools Needed** | Claude Code CLI, VS Code/Cursor, Git, Docker |
@@ -72,7 +71,7 @@ SQLite / PostgreSQL
 
 ## Workshop Modules
 
-### Module 1: Understanding the Codebase (45 min)
+### Module 1: Understanding the Codebase
 
 **Goal:** Show how AI can reverse-engineer an unfamiliar codebase in minutes
 
@@ -86,7 +85,7 @@ SQLite / PostgreSQL
 
 ---
 
-### Module 2: Finding Problems (45 min)
+### Module 2: Finding Problems
 
 **Goal:** Use AI to systematically identify improvement areas
 
@@ -101,7 +100,7 @@ SQLite / PostgreSQL
 
 ---
 
-### Module 3: AI-Assisted Refactoring (60 min)
+### Module 3: AI-Assisted Refactoring
 
 **Goal:** Live refactoring with AI — show the collaboration loop
 
@@ -116,7 +115,7 @@ SQLite / PostgreSQL
 
 ---
 
-### Module 4: Tool Comparison & Discussion (30 min)
+### Module 4: Tool Comparison & Discussion
 
 **Goal:** Understand the landscape of AI coding tools
 
