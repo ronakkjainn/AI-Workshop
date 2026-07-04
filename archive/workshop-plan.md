@@ -6,7 +6,7 @@
 |--------|------|
 | **Audience** | Faculty & Students (CS/IT) |
 | **Prerequisites** | Basic programming knowledge, Git basics |
-| **Tools Needed** | Claude Code CLI, VS Code/Cursor, Git, Docker |
+| **Tools Needed** | IBM Bob IDE, Git |
 | **Primary Repo** | [IBM/galaxium-travels](https://github.com/IBM/galaxium-travels) |
 
 ---
@@ -27,23 +27,20 @@
 | Aspect | Details |
 |--------|---------|
 | **What** | Full-stack interplanetary travel booking app |
-| **Stack** | Python (FastAPI) + Java (Spring Boot) + React/TypeScript |
-| **Size** | ~5,000-10,000 LOC across 3 services — manageable in a workshop |
-| **Why it's great** | Purpose-built with intentional architectural challenges, pre-planted issues with difficulty tiers, polyglot (mimics real enterprise), has Docker/Terraform/CI/CD |
+| **Stack** | Python (FastAPI) + React/TypeScript |
+| **Size** | Manageable in a workshop setting |
+| **Why it's great** | Purpose-built with intentional architectural challenges, pre-planted issues with difficulty tiers, mimics real enterprise patterns |
 
 ### Architecture
 
 ```
-Frontend (React 19 + Vite 7 + Tailwind)
+Frontend (React + TypeScript)
     |
     v [REST]
 Backend API (Python FastAPI + SQLAlchemy)
     |
-    v [REST + Callbacks]
-Inventory Hold Service (Java Spring Boot)
-    |
     v
-SQLite / PostgreSQL
+SQLite (with seed data)
 ```
 
 ### Intentional "Brownfield" Challenges in This Repo
@@ -57,18 +54,6 @@ SQLite / PostgreSQL
 
 ---
 
-## Alternative/Additional Repos
-
-| Repo | Language | Best For |
-|------|----------|----------|
-| [opencart/opencart](https://github.com/opencart/opencart) | PHP | Real legacy — security issues, no tests, procedural code |
-| [saleor/saleor](https://github.com/saleor/saleor) | Python/Django | GraphQL ecommerce, migration debt, test gaps |
-| [spree/spree](https://github.com/spree/spree) | Ruby on Rails | Since 2007 — classic accumulated brownfield |
-| [prestashop/PrestaShop](https://github.com/PrestaShop/PrestaShop) | PHP/Symfony | Massive enterprise-scale brownfield |
-| [spring-petclinic](https://github.com/spring-petclinic/spring-petclinic) | Java/Spring | Simple, well-known, good for quick demo |
-
----
-
 ## Workshop Modules
 
 ### Module 1: Understanding the Codebase
@@ -77,7 +62,7 @@ SQLite / PostgreSQL
 
 **Activities:**
 1. Clone the repo cold — no README reading
-2. Use AI to map architecture, entry points, data flows
+2. Use Bob to map architecture, entry points, data flows
 3. Generate documentation that doesn't exist
 4. Identify service boundaries and communication patterns
 
@@ -106,7 +91,7 @@ SQLite / PostgreSQL
 
 **Activities:**
 1. Pick an issue from the pre-planted tier-3 issues
-2. Have AI propose implementation plan
+2. Have Bob propose implementation plan
 3. Implement with AI assistance
 4. Write tests for the new code
 5. Review the AI's output critically
@@ -115,31 +100,29 @@ SQLite / PostgreSQL
 
 ---
 
-### Module 4: Tool Comparison & Discussion
+### Module 4: Discussion & Wrap-Up
 
-**Goal:** Understand the landscape of AI coding tools
+**Goal:** Reflect on AI-assisted development and its implications
 
-| Tool | Type | Strength |
-|------|------|----------|
-| **Claude Code** | CLI Agent | Deep multi-file understanding, architecture-level refactoring, security review |
-| **IBM Bob** | IDE Agent | Spec-driven, designed for enterprise brownfield (this repo was built for it) |
-| **Kiro (AWS)** | IDE Agent | Spec-first development, generates specs from existing code |
-| **GitHub Copilot** | IDE Extension | Inline suggestions, line-by-line improvements |
-| **Cursor** | IDE | Chat-integrated, fast file-context fixes |
+**Discussion Points:**
+- When did the AI get things right vs. wrong?
+- How do you verify AI-generated code?
+- What skills become more important in an AI-assisted workflow?
+- How does this change the role of a developer?
 
 ---
 
 ## Hands-On Exercises (Pick 2-3)
 
 ### Exercise 1: Architecture Discovery (Beginner)
-> Clone galaxium-travels. Without reading any documentation, use an AI tool to answer:
+> Clone galaxium-travels. Without reading any documentation, use Bob to answer:
 > 1. How many services are there?
 > 2. How do they communicate?
 > 3. What database(s) are used?
 > 4. Draw the data flow for "booking a flight"
 
 ### Exercise 2: Security Audit (Intermediate)
-> Use AI to find at least 3 security concerns in the codebase.
+> Use Bob to find at least 3 security concerns in the codebase.
 > For each: explain the vulnerability, show the code, propose a fix.
 
 ### Exercise 3: Feature Implementation (Advanced)
@@ -147,11 +130,11 @@ SQLite / PostgreSQL
 > - Calendar export for bookings
 > - Promo code system
 > - Flight status chips
-> Use AI to implement it end-to-end including tests.
+> Use Bob to implement it end-to-end including tests.
 
 ### Exercise 4: Cross-Service Bug Hunt (Advanced)
 > The backend sometimes returns HTTP 200 for errors.
-> Use AI to find all instances, explain why this is problematic, and fix them.
+> Use Bob to find all instances, explain why this is problematic, and fix them.
 
 ---
 
@@ -170,22 +153,16 @@ SQLite / PostgreSQL
 ## Setup Instructions (Pre-Workshop)
 
 ```bash
-# 1. Install prerequisites
-brew install git docker node python
+# 1. Install IBM Bob IDE
+# Visit https://bob.ibm.com/docs/ide/getting-started/install
+# Download and install for your platform
 
-# 2. Install Claude Code
-npm install -g @anthropic-ai/claude-code
-
-# 3. Clone the workshop repo
-git clone https://github.com/IBM/galaxium-travels.git
+# 2. Clone the workshop repo
+git clone -b bob-learning-path-branch https://github.com/IBM/galaxium-travels.git
 cd galaxium-travels
 
-# 4. Start services (Docker)
-docker compose up -d
-
-# 5. Verify everything works
-curl http://localhost:8000/health
-curl http://localhost:3000
+# 3. Open in Bob IDE
+# File > Open Folder > select galaxium-travels
 ```
 
 ---
@@ -193,7 +170,6 @@ curl http://localhost:3000
 ## Resources & Links
 
 - [IBM Galaxium Travels](https://github.com/IBM/galaxium-travels)
-- [Claude Code Documentation](https://docs.anthropic.com/en/docs/claude-code)
-- [IBM Bob](https://www.ibm.com/products/bob)
-- [AWS Kiro](https://kiro.dev)
+- [IBM Bob Documentation](https://bob.ibm.com/docs)
+- [Bob Quickstart Tutorial](https://bob.ibm.com/docs/ide/getting-started/quickstart)
 - [OWASP Top 10](https://owasp.org/www-project-top-ten/)
