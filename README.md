@@ -4,15 +4,15 @@ A hands-on workshop teaching how to use AI coding tools to understand, audit, an
 
 ## What's Inside
 
-- **[workshop-plan.md](workshop-plan.md)** — Full workshop structure with modules, exercises, and assessment rubric
 - **[lab-reverse-engineering.md](lab-reverse-engineering.md)** — Hands-on lab: Reverse Engineering a Brownfield Application
+- **[bob-Introduction.md](bob-Introduction.md)** — Introduction to IBM Bob IDE and Galaxium Travels
 
 ## Workshop Modules
 
 1. **Understanding the Codebase** — Reverse-engineer architecture with AI in minutes
 2. **Finding Problems** — Security audits, code quality, and test coverage analysis
 3. **AI-Assisted Refactoring** — Live collaboration loop: plan, implement, test, review
-4. **Tool Comparison** — Strengths of different AI coding tools
+4. **Discussion & Wrap-Up** — Reflect on AI-assisted development and its implications
 
 ## Primary Workshop Repo
 
