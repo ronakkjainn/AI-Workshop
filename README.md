@@ -61,9 +61,6 @@ Once the project is loaded in Bob, confirm the following:
 - IBM Bob IDE installed ([bob.ibm.com/docs](https://bob.ibm.com/docs))
 - Internet connection for AI features
 
-## Who This Is For
-
-Faculty and students in CS/IT programs looking to learn how AI tools accelerate real-world software engineering — not toy examples, but actual legacy codebase navigation, security auditing, and multi-service refactoring.
 
 ## Resources
 

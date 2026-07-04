@@ -292,19 +292,6 @@ After completing the lab, consider the following:
 
 ---
 
-## Assessment Criteria
-
-| Criteria | Points |
-|----------|--------|
-| Correct identification of architecture and tech stack | 20 |
-| Complete and accurate data model documentation | 20 |
-| Thorough API surface mapping | 20 |
-| Accurate end-to-end flow trace | 20 |
-| Quality of identified issues (real problems, not false positives) | 10 |
-| Critical evaluation of AI output (noted inaccuracies or verified claims) | 10 |
-
----
-
 ## Tips for Success
 
 - **Be specific in your prompts** — vague questions get vague answers
